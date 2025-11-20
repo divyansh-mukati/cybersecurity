@@ -1,0 +1,31 @@
+2025-11-21T02:58:56.146216 Attempting secure send. Context: Using certifi CA bundle: C:\Users\divya\AppData\Local\Programs\Python\Python313\Lib\site-packages\certifi\cacert.pem
+2025-11-21T02:58:58.806623 Secure send failed: SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1035)
+Traceback (most recent call last):
+  File "c:\Users\divya\OneDrive\Documents\Cyber Security\Sandbox\File integrity\file_intigrity.py", line 241, in send_email_secure
+    server.starttls(context=ctx)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\divya\AppData\Local\Programs\Python\Python313\Lib\smtplib.py", line 779, in starttls
+    self.sock = context.wrap_socket(self.sock,
+                ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+                                    server_hostname=self._host)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\divya\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\divya\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\divya\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1035)
+
+2025-11-21T02:59:00.954252 Attempting INSECURE send (no cert verification).
+2025-11-21T02:59:11.685532 INSECURE send succeeded.
