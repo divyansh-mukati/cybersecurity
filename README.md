@@ -90,6 +90,13 @@ Folder Structure:
                                          ├── screenshots/
                                          └── recordings/
 
+📚 Technologies Used
+                    Python 3
+                    hashlib
+                    psutil
+                    socket
+                    datetime
+                    
 
 Author:
 Divyansh Mukati
