@@ -28,5 +28,5 @@ How to Run:
 
 Author:
 Name: Divyansh Mukati
-Course: B.Tech CSE
+Course: Integrated M.Tech in Cyber Security
 Academic Year: 2025
